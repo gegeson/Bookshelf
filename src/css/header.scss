@@ -4,13 +4,19 @@
   align-items: center;
   color: black;
   margin: 0;
-  padding: 50px, auto;
+  padding: 100px, auto;
   list-style: none;
+
   a {
     padding: 10px;
+
     svg {
       width: 20px;
       height: 20px;
+    }
+
+    &:hover {
+      color: #7511f6;
     }
   }
 }
