@@ -1,16 +1,24 @@
 import React from "react";
-import { Routes, Router } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+
+import Timeline from "./pages/timeline";
+import Header from "./components/header";
+import Bookshelf from "./pages/bookshelf";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Routes>
-        <Route path="/timeline" />
-        <Route path="/bookshelf" />
-      </Routes>
-    </div>
+    <Container className="App">
+      <Header />
+
+      <main>
+        <Switch>
+          <Route path="/timeline" component={Timeline} />
+          <Route path="/book" component={Bookshelf} />
+        </Switch>
+      </main>
+    </Container>
   );
 }
 
