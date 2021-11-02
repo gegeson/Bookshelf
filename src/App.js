@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Timelines from "./pages/timeline";
 import Header from "./components/header";
 import Bookshelf from "./pages/bookshelf";
-import "./App.scss";
+import "./css/App.scss";
 
 function App() {
   return (

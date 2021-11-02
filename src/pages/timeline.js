@@ -48,7 +48,7 @@ export default function Timelines() {
   return (
     // 交互にするときはposition="alternate"を追加
     <Timeline>
-      {Event.map(({ title, describe, time, category, url, twitter }, i) => (
+      {Event.map(({ title, description, time, category, url, twitter }, i) => (
         <TimelineItem key={i}>
           {/* <Grid item md={3} xs={5.5}> */}
           <TimelineOppositeContent
@@ -76,7 +76,7 @@ export default function Timelines() {
               >
                 {title}
               </Typography>
-              <Typography>{describe}</Typography>
+              <Typography>{description}</Typography>
               <Typography>
                 <Button href={url} className="">
                   Learn more
