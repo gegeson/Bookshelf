@@ -1,5 +1,4 @@
 .App {
-  color: white;
 }
 
 main {
@@ -10,7 +9,7 @@ main {
   margin: 0px auto;
   padding: 100px 0px;
 
-  // @media (max-width: 480px) and (min-height: 700px) {
-  //   padding-bottom: 10vh;
-  // }
+  @media (max-width: 480px) and (min-height: 700px) {
+    padding-bottom: 10vh;
+  }
 }

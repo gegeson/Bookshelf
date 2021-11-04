@@ -1,22 +1,27 @@
-.navlink {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-  margin: 0;
-  padding: 100px, auto;
-  list-style: none;
+.nav {
+  height: 100px;
 
-  a {
-    padding: 10px;
+  .nav-item {
+    padding: 0;
+    margin: 0;
+  }
 
-    svg {
-      width: 20px;
-      height: 20px;
-    }
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin: 0;
+    padding: 0.5rem 1.5rem;
+    list-style: none;
 
     &:hover {
       color: #7511f6;
+    }
+
+    svg {
+      width: 25px;
+      height: 25px;
     }
   }
 }
