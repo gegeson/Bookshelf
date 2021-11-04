@@ -39,8 +39,8 @@ export default function Header() {
   return (
     <Nav className="justify-content-end align-content-center">
       {navList.map(({ title, url, icon }, i) => (
-        <Nav.Item>
-          <Nav.Link key={i} href={url}>
+        <Nav.Item key={i}>
+          <Nav.Link href={url}>
             <SvgIcon>
               <path d={icon} />
             </SvgIcon>
