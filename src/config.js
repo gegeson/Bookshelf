@@ -28,28 +28,27 @@ module.exports = {
   ],
   Book: [
     {
-      title: "test",
-      description: "test",
+      title: "React ハンズオンラーニング",
+      description: "React入門としてはかなりわかりやすく、スラスラ読める.",
       time: "2021/10",
-      images: "images/liella.jpg",
+      image: "reactLearning.jpg",
+      tag: ["React", "Javascript", "Next.js"],
     },
     {
-      title: "test",
-      description: "test",
-      time: "2021/10",
-      images: "images/liella.jpg",
+      title: "ネットワークはなぜ繋がるのか",
+      description:
+        "socket、TCP/IP、ファイアウォールなどネットワーク関係がまとめられていて、インフラ関係の知識を深められる.",
+      time: "2021/11",
+      image: "networkConnect.jpg",
+      tag: ["Infrastructure"],
     },
     {
-      title: "test",
-      description: "test",
+      title: "ゼロから始めるディープラーニング",
+      description:
+        "機械学習の仕組みを一からpythonで作りながら勉強できるのでわかりやすいと思う.",
       time: "2021/10",
-      images: "images/liella.jpg",
-    },
-    {
-      title: "test",
-      description: "test",
-      time: "2021/10",
-      images: "images/liella.jpg",
+      image: "zerotuku.jpeg",
+      tag: ["Python", "Deep learning"],
     },
   ],
 };

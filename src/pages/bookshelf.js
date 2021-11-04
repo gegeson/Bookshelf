@@ -4,12 +4,14 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-
+import Stack from "@mui/material/Stack";
+import Chip from "@mui/material/Chip";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
-import { Book } from "../config";
 
-const card = ({ title, time, discription, images }) => (
+import { Book } from "../config";
+import "../css/bookshelf.scss";
+
+const card = ({ title, time, description, image, tag }) => (
   <Card
     // variant="outlined"
     sx={{ maxWidth: 345 }}
@@ -19,20 +21,35 @@ const card = ({ title, time, discription, images }) => (
     <CardMedia
       component="img"
       alt={title}
-      height="140"
-      src={"images/" + images}
+      height="200"
+      src={`${process.env.PUBLIC_URL}/images/bookshelf/${image}`}
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
+      <Typography
+        gutterBottom
+        variant="h5"
+        component="div"
+        className="bookshelf-title"
+      >
         {title}
       </Typography>
       <Typography
         gutterBottom
         variant="body2"
-        color="text.secondary"
+        // color="text.secondary"
         component="div"
       >
-        {discription}
+        {description}
+      </Typography>
+      <Typography sx={{ mb: 1.5 }} color="text.secondary" component="div">
+        <Stack direction="row" spacing={1}>
+          {tag.map((tag, i) => (
+            <Chip key={i} label={tag} />
+          ))}
+        </Stack>
+      </Typography>
+      <Typography gutterBottom variant="body3" component="div">
+        {"date: " + time}
       </Typography>
     </CardContent>
   </Card>
@@ -41,6 +58,7 @@ const card = ({ title, time, discription, images }) => (
 export default function OutlinedCard() {
   return (
     <>
+      {/* <h1 className="">Bookshelf</h1> */}
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container
