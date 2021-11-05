@@ -58,7 +58,7 @@ const card = ({ title, time, description, image, tag }) => (
 export default function OutlinedCard() {
   return (
     <>
-      {/* <h1 className="">Bookshelf</h1> */}
+      <h1>Bookshelf</h1>
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container
