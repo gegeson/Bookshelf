@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -15,6 +16,7 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 
 import { Event } from "../config";
+import QuiltedImageList from "../components/imagelist";
 
 const Icon = (category) => {
   if (category === "job") {
@@ -48,6 +50,7 @@ export default function Timelines() {
   return (
     // 交互にするときはposition="alternate"を追加
     <Timeline>
+      <h1>Timeline</h1>
       {Event.map(({ title, description, time, category, url, twitter }, i) => (
         <TimelineItem key={i}>
           {/* <Grid item md={3} xs={5.5}> */}
@@ -68,7 +71,7 @@ export default function Timelines() {
           </TimelineSeparator>
           {/* </Grid> */}
           <Grid item md={9} xs={5.5}>
-            <TimelineContent sx={{ py: "12px", px: 2 }}>
+            <TimelineContent sx={{ py: "4rem", px: 2 }}>
               <Typography
                 variant="h6"
                 component="span"
@@ -82,6 +85,9 @@ export default function Timelines() {
                   Learn more
                 </Button>
               </Typography>
+              <div>
+                <QuiltedImageList />
+              </div>
             </TimelineContent>
           </Grid>
         </TimelineItem>
